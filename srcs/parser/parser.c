@@ -6,7 +6,7 @@
 /*   By: psilva-p <psilva-p@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 17:35:25 by psilva-p          #+#    #+#             */
-/*   Updated: 2026/10/27 20:44:10 by psilva-p         ###   ########.fr       */
+/*   Updated: 2026/10/29 13:30:53 by psilva-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 t_status	settings_setter(t_type type, int *base, int *offset)
 {
-	if (type == INT)
+	if (type == FT_INT)
 	{
 		*base = 10;
 		*offset = '0';
 		return (OK);
 	}
-	else if (type == SCHEDULER)
+	else if (type == FT_SCHEDULER)
 	{
 		*base = 256;
 		*offset = 0;
@@ -53,15 +53,15 @@ t_status	validate_arg(char *str, t_type type)
 	i = 0;
 	while (str[i])
 		i++;
-	if (type == INT && (str[0] == '-' || str[0] == '+'))
+	if (type == FT_INT && (str[0] == '-' || str[0] == '+'))
 		return (ERROR_SIGNED_INT);
-	if (type == SCHEDULER && i > 4)
+	if (type == FT_SCHEDULER && i > 4)
 		return (ERROR_SCHEDULER);
 	while (*str)
 	{
-		if (type == INT && !(is_allowed_char(DECIMAL_BASE, *str)))
+		if (type == FT_INT && !(is_allowed_char(DECIMAL_BASE, *str)))
 			return (ERROR_NON_INT);
-		else if (type == SCHEDULER && !(is_allowed_char(SCHEDULER_BASE, *str)))
+		else if (type == FT_SCHEDULER && !is_allowed_char(SCHEDULER_BASE, *str))
 			return (ERROR_SCHEDULER);
 		str++;
 	}
@@ -97,7 +97,7 @@ t_status	parse_arg(char *str, int *out, t_type type)
 			return (status);
 		str++;
 	}
-	if (type == SCHEDULER && value != SCHED_EDF && value != SCHED_FIFO)
+	if (type == FT_SCHEDULER && value != FT_SCHED_EDF && value != FT_SCHED_FIFO)
 		return (ERROR_INVALID_SCHEDULER);
 	*out = value;
 	return (OK);

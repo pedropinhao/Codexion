@@ -1,2 +1,2 @@
 CompileFlags:
-  Add: [-xc, -Wall, -Wextra, -Werror, -I/home/pedrogilpinhao/common_core/Codexion/includes]
+  Add: [-xc, -Wall, -Wextra, -Werror, -pthread,-I/home/pedrogilpinhao/common_core/Codexion/includes]
