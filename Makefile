@@ -4,7 +4,11 @@ COMPILE := cc -Wall -Werror -Wextra -g -I./includes
 SRCS := srcs/main.c \
 		srcs/parser/parser.c \
 		srcs/init/init_config.c \
-		srcs/utils/utils.c
+		srcs/init/init_coders.c \
+		srcs/init/init_sim.c \
+		srcs/init/init_dongles.c \
+		srcs/utils/destroy.c \
+		srcs/utils/time.c
 OBJS := $(SRCS:.c=.o)
 ARGS ?=
 

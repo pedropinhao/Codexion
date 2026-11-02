@@ -6,7 +6,7 @@
 /*   By: psilva-p <psilva-p@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 19:31:48 by psilva-p          #+#    #+#             */
-/*   Updated: 2026/10/29 23:45:01 by psilva-p         ###   ########.fr       */
+/*   Updated: 2026/10/31 20:04:50 by psilva-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ typedef enum e_status
 	ERROR_MALLOC = 11,
 	ERROR_CLOCK = 12,
 	ERROR_MONITOR_THREAD = 13,
+	ERROR_MUTEX_INIT = 14,
+	ERROR_COND_INIT = 15,
 }	t_status;
 
 typedef enum e_parser_type
