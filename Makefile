@@ -1,15 +1,24 @@
 NAME := Codexion
 
-COMPILE := cc -Wall -Werror -Wextra -g -I./includes
+COMPILE := cc -Wall -Werror -Wextra -pthread -g -I./includes
+
 SRCS := srcs/main.c \
-		srcs/parser/parser.c \
-		srcs/init/init_config.c \
 		srcs/init/init_coders.c \
-		srcs/init/init_sim.c \
+		srcs/init/init_config.c \
 		srcs/init/init_dongles.c \
+		srcs/init/init_sim.c \
+		srcs/init/init_threads.c \
+		srcs/parser/parser.c \
+		srcs/routines/routine.c \
+		srcs/routines/lone_coder.c \
 		srcs/utils/destroy.c \
+		srcs/utils/dongles.c \
+		srcs/utils/log.c \
+		srcs/utils/state.c \
 		srcs/utils/time.c
+
 OBJS := $(SRCS:.c=.o)
+
 ARGS ?=
 
 

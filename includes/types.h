@@ -6,7 +6,7 @@
 /*   By: psilva-p <psilva-p@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 19:31:48 by psilva-p          #+#    #+#             */
-/*   Updated: 2026/10/31 20:04:50 by psilva-p         ###   ########.fr       */
+/*   Updated: 2026/11/08 23:16:26 by psilva-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ typedef enum e_status
 	ERROR_MONITOR_THREAD = 13,
 	ERROR_MUTEX_INIT = 14,
 	ERROR_COND_INIT = 15,
+	ERROR_CODER_THREAD = 16,
+	ERROR_SLEEP = 17,
+	DONGLE_BUSY = 18,
+	DONGLE_COOLING = 19,
+	SIM_STOPPED = 20,
 }	t_status;
 
 typedef enum e_parser_type

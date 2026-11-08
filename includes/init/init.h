@@ -6,7 +6,7 @@
 /*   By: psilva-p <psilva-p@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 18:54:18 by psilva-p          #+#    #+#             */
-/*   Updated: 2026/11/01 12:56:57 by psilva-p         ###   ########.fr       */
+/*   Updated: 2026/11/08 19:37:04 by psilva-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ t_status	init_dongle(t_dongle	*dongle);
 t_status	init_dongles(t_sim *simulation);
 void		init_coder(int id, t_coder *coder, t_sim *simulation);
 void		init_coders(t_sim *simulation);
+t_status	init_threads(t_sim	*simulation);
+t_status	join_threads(t_sim *simulation);
 
 #endif
