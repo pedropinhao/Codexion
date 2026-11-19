@@ -6,17 +6,13 @@
 /*   By: psilva-p <psilva-p@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 12:20:06 by psilva-p          #+#    #+#             */
-/*   Updated: 2026/11/02 16:07:58 by psilva-p         ###   ########.fr       */
+/*   Updated: 2026/11/19 06:14:11 by psilva-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "init/init.h"
 #include "types.h"
 #include "utils/utils.h"
-#include <pthread.h>
-#include <stddef.h>
-#include <stdlib.h>
-#include <string.h>
 
 t_status	alloc_arrays(t_sim *simulation)
 {
@@ -63,7 +59,7 @@ t_status	init_sim(t_sim *simulation)
 	simulation->coders = NULL;
 	simulation->started_ms = get_time();
 	if (simulation->started_ms == -1)
-		return (ERROR_CLOCK);
+		return (SIM_STOPPED);
 	status = init_mutexes(simulation);
 	if (status != OK)
 		return (status);
