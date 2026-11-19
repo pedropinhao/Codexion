@@ -6,7 +6,7 @@
 /*   By: psilva-p <psilva-p@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 19:31:48 by psilva-p          #+#    #+#             */
-/*   Updated: 2026/11/08 23:16:26 by psilva-p         ###   ########.fr       */
+/*   Updated: 2026/11/16 23:33:40 by psilva-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ typedef enum e_status
 	DONGLE_BUSY = 18,
 	DONGLE_COOLING = 19,
 	SIM_STOPPED = 20,
+	BURNOUT_DETECTED = 21,
+	SIM_COMPLETED = 22,
 }	t_status;
 
 typedef enum e_parser_type

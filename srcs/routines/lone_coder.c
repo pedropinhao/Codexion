@@ -6,14 +6,12 @@
 /*   By: psilva-p <psilva-p@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/08 22:49:39 by psilva-p          #+#    #+#             */
-/*   Updated: 2026/11/08 22:58:22 by psilva-p         ###   ########.fr       */
+/*   Updated: 2026/11/19 06:11:28 by psilva-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "routines/routines.h"
 #include "utils/utils.h"
-#include <pthread.h>
-#include <stdbool.h>
 
 void	lone_coder_routine(t_coder *coder)
 {

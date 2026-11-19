@@ -8,6 +8,7 @@ SRCS := srcs/main.c \
 		srcs/init/init_dongles.c \
 		srcs/init/init_sim.c \
 		srcs/init/init_threads.c \
+		srcs/monitor//monitor.c \
 		srcs/parser/parser.c \
 		srcs/routines/routine.c \
 		srcs/routines/lone_coder.c \

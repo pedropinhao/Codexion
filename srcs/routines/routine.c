@@ -6,7 +6,7 @@
 /*   By: psilva-p <psilva-p@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 22:59:41 by psilva-p          #+#    #+#             */
-/*   Updated: 2026/11/08 23:29:56 by psilva-p         ###   ########.fr       */
+/*   Updated: 2026/11/19 06:11:33 by psilva-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,7 @@ void	*coder_routine(void *argument)
 
 	coder = (t_coder *)argument;
 	if (coder->sim->config.number_of_coders == 1)
-	{
-		lone_coder_routine(coder);
-		return (NULL);
-	}
+		return (lone_coder_routine(coder), NULL);
 	while (!simulation_is_stopped(coder->sim))
 	{
 		if (compile(coder) != OK)

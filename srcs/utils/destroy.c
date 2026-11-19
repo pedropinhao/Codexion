@@ -6,14 +6,12 @@
 /*   By: psilva-p <psilva-p@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 12:48:29 by psilva-p          #+#    #+#             */
-/*   Updated: 2026/11/02 13:37:47 by psilva-p         ###   ########.fr       */
+/*   Updated: 2026/11/19 06:11:50 by psilva-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "types.h"
 #include "utils/utils.h"
-#include <pthread.h>
-#include <stdlib.h>
 
 void	destroy_mutexes(t_sim *simulation)
 {
